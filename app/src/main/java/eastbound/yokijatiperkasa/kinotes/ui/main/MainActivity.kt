@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        toast("Hello, World!")
+
 
 
 

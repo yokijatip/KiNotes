@@ -1,6 +1,7 @@
 package eastbound.yokijatiperkasa.kinotes.data.local.room
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -8,6 +9,7 @@ import androidx.room.Query
 import androidx.room.Update
 import eastbound.yokijatiperkasa.kinotes.data.entity.NoteEntity
 
+@Dao
 interface KiDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

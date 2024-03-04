@@ -56,6 +56,9 @@ dependencies {
     //noinspection UseTomlInstead
     implementation ("com.github.pawegio:KAndroid:0.8.7@aar")
 
+//    Power Menu
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import eastbound.yokijatiperkasa.kinotes.data.entity.NoteEntity
 
-@Database(entities = [KiRoomDatabase::class], version = 1)
+@Database(entities = [NoteEntity::class], version = 2)
 abstract class KiRoomDatabase : RoomDatabase(){
 
     abstract fun dao(): KiDao

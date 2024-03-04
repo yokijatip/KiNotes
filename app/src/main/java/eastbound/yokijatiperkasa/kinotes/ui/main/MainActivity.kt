@@ -1,6 +1,9 @@
 package eastbound.yokijatiperkasa.kinotes.ui.main
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,9 +28,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
         binding.apply {
-            fab.setOnClickListener {
-                toast("Hello, World!")
+            ivMenu.setOnClickListener {
+                toast("Menu Clicked")
             }
         }
 
@@ -36,5 +40,26 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+//    Create Options Menu
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.home_menu, menu)
+        return true
+    }
+
+//    Handle Options Menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.home_menu_about -> {
+                toast("About")
+                true
+            }
+            R.id.home_menu_archive -> {
+                toast("Archive")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
